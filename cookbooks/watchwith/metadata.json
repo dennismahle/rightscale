@@ -1,57 +1,57 @@
 {
-  "platforms": {
-  },
-  "license": "All rights reserved",
-  "description": "Installs/Configures watchwith",
-  "conflicting": {
-  },
-  "name": "watchwith",
+  "maintainer_email": "dennis@watchwith.com",
   "groupings": {
   },
-  "providing": {
-  },
-  "maintainer_email": "dennis@watchwith.com",
-  "recommendations": {
-  },
-  "maintainer": "Watchwith",
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
-  "version": "0.0.1",
-  "recipes": {
-    "watchwith::s3cmd": "Configure env with aws credentials"
+  "suggestions": {
   },
   "dependencies": {
     "rightscale": ">= 0.0.0"
   },
+  "recipes": {
+    "watchwith::s3cmd": "Configure env with aws credentials"
+  },
+  "license": "All rights reserved",
+  "version": "0.0.1",
   "attributes": {
-    "watchwith/s3cmd/aws_key_id": {
-      "calculated": false,
-      "required": "required",
-      "description": "aws_key_id",
-      "choice": [
-
-      ],
-      "type": "string",
-      "display_name": "aws_key_id",
-      "recipes": [
-        "watchwith::s3cmd"
-      ]
-    },
     "watchwith/s3cmd/aws_key_secret": {
       "calculated": false,
-      "required": "required",
-      "description": "aws_key_secret",
       "choice": [
 
       ],
       "type": "string",
-      "display_name": "aws_key_secret",
       "recipes": [
         "watchwith::s3cmd"
-      ]
+      ],
+      "description": "aws_key_secret",
+      "required": "required",
+      "display_name": "aws_key_secret"
+    },
+    "watchwith/s3cmd/aws_key_id": {
+      "calculated": false,
+      "choice": [
+
+      ],
+      "type": "string",
+      "recipes": [
+        "watchwith::s3cmd"
+      ],
+      "description": "aws_key_id",
+      "required": "required",
+      "display_name": "aws_key_id"
     }
   },
-  "suggestions": {
+  "platforms": {
   },
+  "maintainer": "Watchwith",
+  "providing": {
+  },
+  "conflicting": {
+  },
+  "description": "Installs/Configures watchwith",
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
   "replacing": {
+  },
+  "name": "watchwith",
+  "recommendations": {
   }
 }
