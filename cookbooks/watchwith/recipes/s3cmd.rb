@@ -19,8 +19,10 @@ end
 bash "Activate environment" do
   code <<-EOH
   export AWS_CREDENTIALS_FILE="/root/.aws_credentials"
-  echo "source /root/.aws_credentials" >> ~/.bashrc
+  export AWS_ACCESS_KEY_ID="#{node[:watchwith][:s3cmd][:aws_key_id]}"
+  export AWS_SECRET_ACCESS_KEY="#{node[:watchwith][:s3cmd][:aws_key_secret]}"
   echo AWS_CREDENTIALS_FILE: $AWS_CREDENTIALS_FILE
+  echo AWS_ACCESS_KEY_ID: $AWS_SECRET_ACCESS_KEY
   s3cmd get "s3://watchwith-wars/test_tgz/watchwith-api_20120817-1056.tar.gz" api.tar.gz
   EOH
 end
