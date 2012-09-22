@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
+  "version": "0.0.1",
+  "recommendations": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "providing": {
+  },
+  "platforms": {
+  },
+  "maintainer_email": "dennis@watchwith.com",
+  "replacing": {
+  },
+  "conflicting": {
+  },
+  "name": "about_me",
+  "recipes": {
+    "about_me::default": "Prints my first name and several of my favorite things as output."
+  },
+  "maintainer": "Watchwith",
+  "description": "Installs/Configures about_me",
+  "groupings": {
+  },
+  "attributes": {
+  },
+  "suggestions": {
+  },
+  "license": "All rights reserved"
+}
