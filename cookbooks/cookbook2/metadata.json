@@ -1,31 +1,31 @@
 {
-  "replacing": {
+  "version": "0.0.2",
+  "providing": {
   },
-  "suggestions": {
+  "name": "cookbook2",
+  "groupings": {
   },
-  "conflicting": {
-  },
-  "attributes": {
-  },
-  "maintainer": "Watchwith",
   "dependencies": {
     "rightscale": ">= 0.0.0"
   },
   "recommendations": {
   },
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
-  "recipes": {
-    "cookbook2::default": "Prints hello world output"
-  },
-  "providing": {
-  },
-  "name": "cookbook2",
-  "license": "All rights reserved",
-  "description": "Installs/Configures cookbook2",
-  "groupings": {
+  "maintainer_email": "dennis@watchwith.com",
+  "suggestions": {
   },
   "platforms": {
   },
-  "maintainer_email": "dennis@watchwith.com",
-  "version": "0.0.1"
+  "attributes": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "replacing": {
+  },
+  "description": "Installs/Configures cookbook2",
+  "conflicting": {
+  },
+  "maintainer": "Watchwith",
+  "license": "All rights reserved",
+  "recipes": {
+    "cookbook2::default": "Prints hello world output"
+  }
 }
