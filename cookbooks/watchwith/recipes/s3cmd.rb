@@ -20,6 +20,7 @@ bash "Activate environment" do
   code <<-EOH
   export AWS_CREDENTIALS_FILE="/root/.aws_credentials"
   echo "source /root/.aws_credentials" >> ~/.bashrc
+  echo AWS_CREDENTIALS_FILE: $AWS_CREDENTIALS_FILE
   s3cmd get "s3://watchwith-wars/test_tgz/watchwith-api_20120817-1056.tar.gz" api.tar.gz
   EOH
 end
