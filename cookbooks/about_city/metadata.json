@@ -1,0 +1,72 @@
+{
+  "conflicting": {
+  },
+  "license": "All rights reserved",
+  "maintainer": "Watchwith",
+  "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
+  "attributes": {
+    "about_city/temperature": {
+      "choice": [
+
+      ],
+      "required": "optional",
+      "display_name": "Temperature",
+      "description": "Current temperature in the city",
+      "calculated": false,
+      "recipes": [
+        "about_city::my_city"
+      ],
+      "type": "string"
+    },
+    "about_city/city_name": {
+      "choice": [
+
+      ],
+      "required": "required",
+      "display_name": "City Name",
+      "description": "The city where I currently live.",
+      "calculated": false,
+      "recipes": [
+        "about_city::my_city"
+      ],
+      "type": "string"
+    },
+    "about_city/rain": {
+      "choice": [
+        "yes",
+        "no"
+      ],
+      "required": "recommended",
+      "default": "no",
+      "display_name": "Raining",
+      "description": "Is it raining? Yes or No",
+      "calculated": false,
+      "recipes": [
+        "about_city::my_city"
+      ],
+      "type": "string"
+    }
+  },
+  "platforms": {
+  },
+  "version": "0.0.1",
+  "replacing": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "name": "about_city",
+  "maintainer_email": "dennis@watchwith.com",
+  "description": "Installs/Configures about_city",
+  "providing": {
+  },
+  "suggestions": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "about_city::my_city": "Information about my city"
+  },
+  "recommendations": {
+  }
+}
