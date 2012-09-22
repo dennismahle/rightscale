@@ -1,0 +1,30 @@
+{
+  "description": "Installs/Configures cookbook2",
+  "providing": {
+  },
+  "maintainer_email": "dennis@watchwith.com",
+  "recommendations": {
+  },
+  "version": "0.0.1",
+  "conflicting": {
+  },
+  "name": "cookbook2",
+  "suggestions": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "recipes": {
+    "cookbook2::default": "Prints hello world output"
+  },
+  "dependencies": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Watchwith",
+  "groupings": {
+  },
+  "attributes": {
+  },
+  "replacing": {
+  },
+  "license": "All rights reserved"
+}
