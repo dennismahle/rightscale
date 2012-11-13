@@ -11,6 +11,9 @@ set_unless[:app_tomcat][:watchwith][:db_username] = ""
 set_unless[:app_tomcat][:watchwith][:db_password] = ""
 set_unless[:app_tomcat][:watchwith][:ecms_url] = ""
 set_unless[:app_tomcat][:watchwith][:ecms_host] = ""
+set_unless[:app_tomcat][:watchwith][:aws_access_key] = ""
+set_unless[:app_tomcat][:watchwith][:aws_secret_key] = ""
+
 
 # Recommended attributes
 set_unless[:app_tomcat][:code][:root_war] = ""
