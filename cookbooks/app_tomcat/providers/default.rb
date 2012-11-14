@@ -140,13 +140,13 @@ action :setup_vhost do
   port = new_resource.port
   app_root = new_resource.root
 
-  log "  Creating tomcat6.conf"
-  template "/etc/tomcat6/tomcat6.conf" do
+  log "  Creating /etc/init.d/tomcat6"
+  template "/etc/init.d/tomcat6" do
     action :create
     source "tomcat6_conf.erb"
     group "root"
     owner "root"
-    mode "0644"
+    mode "0755"
     cookbook 'app_tomcat'
     variables(
       :app_user => node[:app_tomcat][:app_user],
