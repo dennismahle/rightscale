@@ -85,6 +85,7 @@ if [ -z "$JAVA_OPTS" ]; then
 	JAVA_OPTS="-Djava.awt.headless=true -Xms<%=@java_xms%> -Xmx<%=@java_xmx%>"
 	JAVA_OPTS="$JAVA_OPTS -XX:PermSize=<%=@java_permsize%> -XX:MaxPermSize=<%=@java_maxpermsize%>"
 	JAVA_OPTS="$JAVA_OPTS -XX:NewSize=<%=@java_newsize%> -XX:MaxNewSize=<%=@java_maxnewsize%>"
+	JAVA_OPTS="$JAVA_OPTS -DJDBC_CONNECTION_STRING=<%=@watchwith_connection_string%>"
 	JAVA_OPTS="$JAVA_OPTS -DPARAM4=<%=@watchwith_ecms_host%>"
 	JAVA_OPTS="$JAVA_OPTS -DPARAM3=<%=@watchwith_ecms_url%>"
 	JAVA_OPTS="$JAVA_OPTS -DPARAM2=<%=@watchwith_db_password%>"
