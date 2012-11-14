@@ -1,57 +1,70 @@
 {
-  "maintainer_email": "dennis@watchwith.com",
-  "groupings": {
+  "conflicting": {
   },
   "suggestions": {
   },
+  "groupings": {
+  },
   "dependencies": {
     "rightscale": ">= 0.0.0"
-  },
-  "recipes": {
-    "watchwith::s3cmd": "Configure env with aws credentials"
-  },
-  "license": "All rights reserved",
-  "version": "0.0.1",
-  "attributes": {
-    "watchwith/s3cmd/aws_key_secret": {
-      "calculated": false,
-      "choice": [
-
-      ],
-      "type": "string",
-      "recipes": [
-        "watchwith::s3cmd"
-      ],
-      "description": "aws_key_secret",
-      "required": "required",
-      "display_name": "aws_key_secret"
-    },
-    "watchwith/s3cmd/aws_key_id": {
-      "calculated": false,
-      "choice": [
-
-      ],
-      "type": "string",
-      "recipes": [
-        "watchwith::s3cmd"
-      ],
-      "description": "aws_key_id",
-      "required": "required",
-      "display_name": "aws_key_id"
-    }
   },
   "platforms": {
   },
   "maintainer": "Watchwith",
   "providing": {
   },
-  "conflicting": {
+  "recommendations": {
   },
+  "name": "watchwith",
+  "maintainer_email": "dennis@watchwith.com",
   "description": "Installs/Configures watchwith",
+  "version": "0.0.1",
+  "recipes": {
+    "watchwith::s3cmd": "Configure env with aws credentials"
+  },
+  "attributes": {
+    "watchwith/s3cmd/aws_key_secret": {
+      "display_name": "aws_key_secret",
+      "choice": [
+
+      ],
+      "description": "aws_key_secret",
+      "required": "required",
+      "recipes": [
+        "watchwith::s3cmd"
+      ],
+      "calculated": false,
+      "type": "string"
+    },
+    "watchwith/s3cmd/aws_key_id": {
+      "display_name": "aws_key_id",
+      "choice": [
+
+      ],
+      "description": "aws_key_id",
+      "required": "required",
+      "recipes": [
+        "watchwith::s3cmd"
+      ],
+      "calculated": false,
+      "type": "string"
+    },
+    "watchwith/s3cmd/s3_api_war": {
+      "display_name": "s3_api_war",
+      "choice": [
+
+      ],
+      "description": "s3_api_war",
+      "required": "required",
+      "recipes": [
+        "watchwith::s3cmd"
+      ],
+      "calculated": false,
+      "type": "string"
+    }
+  },
   "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
   "replacing": {
   },
-  "name": "watchwith",
-  "recommendations": {
-  }
+  "license": "All rights reserved"
 }

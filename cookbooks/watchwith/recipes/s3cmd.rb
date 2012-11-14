@@ -23,7 +23,8 @@ bash "Activate environment" do
   export AWS_SECRET_ACCESS_KEY="#{node[:watchwith][:s3cmd][:aws_key_secret]}"
   echo AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
   echo AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-  s3cmd get "watchwith-wars:watchwith-api/test_tgz/watchwith-api_20120817-1056.tar.gz" watchwith-api_20120817-1056.tar.gz
+  # s3cmd get "ars:watchwith-api/test_tgz/watchwith-api_20120817-1056.tar.gz" watchwith-api_20120817-1056.tar.gz
+  s3cmd get "#{node[:watchwith][:s3cmd][:s3_api_war]}" watchwith-api.war
   EOH
 end
 

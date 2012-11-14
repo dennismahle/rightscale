@@ -22,3 +22,9 @@ attribute "watchwith/s3cmd/aws_key_secret",
   :required => "required",
   :recipes => ["watchwith::s3cmd"]
 
+attribute "watchwith/s3cmd/s3_api_war",
+  :display_name => "s3_api_war",
+  :description => "s3_api_war",
+  :required => "required",
+  :recipes => ["watchwith::s3cmd"]
+
