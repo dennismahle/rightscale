@@ -433,9 +433,6 @@ action :code_update do
   bash "set_root_war_and_chown_home" do
     flags "-ex"
     code <<-EOH
-      cd /tmp
-      tar xvzf app.tar.gz
-      mv *.war root.war
       cd #{deploy_dir}
       if [ ! -z "#{node[:app_tomcat][:code][:root_war]}" -a -e "#{deploy_dir}/#{node[:app_tomcat][:code][:root_war]}" ] ; then
         mv #{deploy_dir}/#{node[:app_tomcat][:code][:root_war]} #{deploy_dir}/ROOT.war
