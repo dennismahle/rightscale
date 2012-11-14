@@ -416,15 +416,16 @@ action :code_update do
   log "  Starting code update sequence"
   log "  Current tomcat docroot is set to #{deploy_dir}"
 
-  log "  Downloading project repo"
-  # Calling "repo" LWRP to download remote project repository
-  repo "default" do
-    destination deploy_dir
-    action node[:repo][:default][:perform_action].to_sym
-    app_user node[:app_tomcat][:app_user]
-    repository node[:repo][:default][:repository]
-    persist false
-  end
+  #log "  Downloading project repo"
+  # DELETED Calling "repo" LWRP to download remote project repository
+  #repo "default" do
+  #  destination deploy_dir
+  #  action node[:repo][:default][:perform_action].to_sym
+  #  app_user node[:app_tomcat][:app_user]
+  #  repository node[:repo][:default][:repository]
+  #  persist false
+  #end
+
 
   log "  Set ROOT war and code ownership"
   # Preparing user defined war file for tomcat auto deploy.
@@ -432,6 +433,9 @@ action :code_update do
   bash "set_root_war_and_chown_home" do
     flags "-ex"
     code <<-EOH
+      cd /tmp
+      tar xvzf app.tar.gz
+      mv *.war root.war
       cd #{deploy_dir}
       if [ ! -z "#{node[:app_tomcat][:code][:root_war]}" -a -e "#{deploy_dir}/#{node[:app_tomcat][:code][:root_war]}" ] ; then
         mv #{deploy_dir}/#{node[:app_tomcat][:code][:root_war]} #{deploy_dir}/ROOT.war
