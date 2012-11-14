@@ -143,7 +143,7 @@ action :setup_vhost do
   log "  Creating /etc/init.d/tomcat6"
   template "/etc/init.d/tomcat6" do
     action :create
-    source "tomcat6_conf.erb"
+    source "tomcat6.erb"
     group "root"
     owner "root"
     mode "0755"
