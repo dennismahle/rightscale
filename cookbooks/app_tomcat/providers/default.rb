@@ -442,6 +442,7 @@ action :code_update do
         mv #{deploy_dir}/#{node[:app_tomcat][:code][:root_war]} #{deploy_dir}/ROOT.war
       fi
       chown -R #{node[:app_tomcat][:app_user]}:#{node[:app_tomcat][:app_user]} #{deploy_dir}
+      chown -R #{node[:app_tomcat][:app_user]}:#{node[:app_tomcat][:app_user]} /var/lib/tomcat6
       sleep 5
     EOH
     only_if { node[:app_tomcat][:code][:root_war] != "ROOT.war" }
