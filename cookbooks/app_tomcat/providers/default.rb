@@ -156,7 +156,7 @@ action :setup_vhost do
       :java_maxpermsize => node[:app_tomcat][:java][:maxpermsize],
       :java_newsize => node[:app_tomcat][:java][:newsize],
       :java_maxnewsize => node[:app_tomcat][:java][:maxnewsize],
-      :watchwith_connection_string => node[:app_tomcat][:watchwith][:jdbc_connection_string],
+      :watchwith_connection_string => node[:app_tomcat][:watchwith][:jdbc_connection],
       :watchwith_db_username => node[:app_tomcat][:watchwith][:db_username],
       :watchwith_db_password => node[:app_tomcat][:watchwith][:db_password],
       :watchwith_ecms_url => node[:app_tomcat][:watchwith][:ecms_url],
